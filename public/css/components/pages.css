@@ -1,0 +1,237 @@
+/* 
+ * Boulder Marketing - Inner Pages Styles
+ */
+
+/* ---- Page Header ---- */
+.page-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: calc(var(--spacing-xl) + 80px) 0 var(--spacing-lg);
+    text-align: center;
+    position: relative;
+  }
+  
+  .page-header h1 {
+    color: white;
+    margin-bottom: 0;
+  }
+  
+  /* ---- Contact Form ---- */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: var(--spacing-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--bg-accent);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+    background-color: var(--bg-light);
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(172, 130, 85, 0.2);
+    background-color: white;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  /* ---- Portfolio Grid ---- */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .portfolio-item {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-medium);
+    background-color: white;
+  }
+  
+  .portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .portfolio-image {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+  }
+  
+  .portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-medium);
+  }
+  
+  .portfolio-item:hover .portfolio-image img {
+    transform: scale(1.05);
+  }
+  
+  .portfolio-info {
+    padding: var(--spacing-sm);
+  }
+  
+  .portfolio-info h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+  }
+  
+  .portfolio-info p {
+    color: var(--text-medium);
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+  
+  /* ---- About Page ---- */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .team-member {
+    text-align: center;
+    background-color: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform var(--transition-fast);
+  }
+  
+  .team-member:hover {
+    transform: translateY(-5px);
+  }
+  
+  .team-photo {
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .team-info {
+    padding: var(--spacing-md);
+  }
+  
+  .team-info h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .team-role {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .team-bio {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+  }
+  
+  /* ---- Services Page ---- */
+  .service-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .service-detail:nth-child(even) .service-detail-content {
+    order: -1;
+  }
+  
+  .service-detail-image {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .service-detail-image img {
+    width: 100%;
+    display: block;
+  }
+  
+  .service-detail-content h3 {
+    color: var(--primary-dark);
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .service-detail-content p {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .service-features {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .service-feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .feature-icon {
+    color: var(--primary-color);
+    margin-right: var(--spacing-sm);
+  }
+  
+  /* Responsive Page Styles */
+  @media (max-width: 992px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .service-detail {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+    }
+    
+    .service-detail:nth-child(even) .service-detail-content {
+      order: 0;
+    }
+    
+    .service-detail-image {
+      margin-bottom: var(--spacing-md);
+    }
+  }

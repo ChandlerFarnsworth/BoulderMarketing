@@ -1,0 +1,322 @@
+/* 
+ * Boulder Marketing - Home Page Styles - Updated
+ */
+
+/* ---- Hero Section - SMALLER HEIGHT ---- */
+.hero-section {
+  height: 65vh; /* Reduced from 85vh */
+  min-height: 450px; /* Reduced from 550px */
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--bg-light);
+  background-image: url('/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  padding: 0;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(172, 130, 85, 0.85), rgba(54, 41, 26, 0.85));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
+
+.hero-content h1 {
+  margin-bottom: var(--spacing-md);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.hero-content .subheadline {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-md);
+  color: white;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+/* ---- Mission Section ---- */
+.mission-section {
+  background-color: var(--bg-light);
+  padding: var(--spacing-md) 0;
+}
+
+/* ---- Services Section ---- */
+.services-preview {
+  background-color: white;
+  position: relative;
+  padding: var(--spacing-lg) 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.service-card {
+  background-color: var(--bg-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-md);
+  transition: all var(--transition-medium);
+  height: 100%;
+  border-top: 3px solid var(--primary-color);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-card h3 {
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary-dark);
+}
+
+.service-card p {
+  color: var(--text-medium);
+}
+
+.section-footer {
+  text-align: center;
+  margin-top: var(--spacing-md);
+}
+
+/* ---- About Section - REDESIGNED ---- */
+.about-preview {
+  background-color: var(--bg-accent);
+  position: relative;
+  padding: var(--spacing-lg) 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.about-content h2 {
+  color: var(--primary-dark);
+  margin-bottom: var(--spacing-xs);
+  font-size: 2.2rem;
+}
+
+.about-tagline {
+  font-size: 1.2rem;
+  color: var(--text-medium);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-content p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.8;
+}
+
+/* Redesigned values list - no emojis */
+.values-list {
+  margin: var(--spacing-md) 0;
+  border-left: 3px solid var(--primary-color);
+  padding-left: var(--spacing-md);
+}
+
+.value-item {
+  margin-bottom: var(--spacing-md);
+  position: relative;
+}
+
+.value-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--primary-dark);
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-xs);
+  display: block;
+}
+
+.value-text {
+  color: var(--text-medium);
+  line-height: 1.7;
+}
+
+.about-image {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(transparent, rgba(54, 41, 26, 0.7));
+}
+
+.about-cta {
+  margin-top: var(--spacing-md);
+}
+
+/* ---- Testimonial Section ---- */
+.testimonial-section {
+  background-color: white;
+  padding: var(--spacing-lg) 0;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.testimonial-card {
+  background-color: var(--bg-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover,
+.testimonial-card.active {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(54, 41, 26, 0.15);
+}
+
+.testimonial-content {
+  padding: var(--spacing-md);
+  position: relative;
+}
+
+.quote-mark {
+  font-size: to 4rem;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  color: var(--primary-color);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+}
+
+.testimonial-content p {
+  position: relative;
+  z-index: 1;
+  font-style: italic;
+  margin-bottom: var(--spacing-md);
+}
+
+.client-info {
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid rgba(172, 130, 85, 0.2);
+}
+
+.client-name {
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.client-business {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+}
+
+/* ---- CTA Section ---- */
+.cta-section {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+}
+
+.cta-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-wrapper h2 {
+  margin-bottom: var(--spacing-sm);
+  color: white;
+}
+
+.cta-wrapper p {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-md);
+  color: white;
+  opacity: 0.9;
+}
+
+/* Responsive Home Styles */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-image {
+    order: -1;
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-section {
+    height: auto;
+    min-height: 400px;
+    padding: var(--spacing-xl) 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    padding: var(--spacing-sm);
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-content .subheadline {
+    font-size: 1.1rem;
+  }
+}
