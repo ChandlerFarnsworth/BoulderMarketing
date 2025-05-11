@@ -1,174 +1,322 @@
-<!-- Hero Section -->
-<section class="hero-section">
-    <div class="container">
-        <div class="hero-content">
-            <h1>Marketing Built on the Rock.</h1>
-            <p class="subheadline">Student-led, Christ-first, and rooted in purpose — we help small businesses come alive online with strategy-driven marketing that reflects your values.</p>
-            <div class="cta-buttons">
-                <a href="/contact" class="btn btn-primary">
-                    <i class="far fa-envelope"></i> Let's Work Together
-                </a>
-                <a href="/services" class="btn btn-outline">
-                    <i class="far fa-file-alt"></i> View Services
-                </a>
-            </div>
+{{!-- Boulder Marketing Homepage --}}
+
+<main class="home-page">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-title-container">
+          <h1 class="reveal-text">Marketing Built <br>on the <span class="accent">Rock</span></h1>
         </div>
+        <p class="hero-tagline reveal-text">We help small businesses share their values through purpose-driven digital marketing.</p>
+        <div class="hero-cta reveal-text">
+          <a href="/contact" class="btn btn-primary btn-glow">Let's Talk</a>
+          <a href="#services" class="btn btn-outline btn-arrow">
+            <span>Our Services</span>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-shape-1"></div>
+        <div class="hero-shape-2"></div>
+        <div class="hero-shape-3"></div>
+      </div>
     </div>
+  </section>
+
+  <!-- Scripture Banner -->
+  <section id="scripture" class="scripture-banner">
+    <div class="container">
+      <div class="verse-container">
+        <div class="verse-icon">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <div class="verse">
+          <p>"Therefore everyone who hears these words of mine and puts them into practice is like a wise man who built his house on the rock." <cite>Matthew 7:24</cite></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Services Section -->
+<section id="services" class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Services</span>
+      <h2>What We Do</h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-card-inner">
+          <div class="service-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="service-content">
+            <h3>Website Design</h3>
+            <p>Clean, modern websites that reflect your values and connect with your audience.</p>
+            <a href="/services/website-design" class="service-link">
+              <span>Learn more</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card-inner">
+          <div class="service-icon">
+            <i class="fas fa-hashtag"></i>
+          </div>
+          <div class="service-content">
+            <h3>Social Media</h3>
+            <p>Authentic content that builds meaningful connections with your community.</p>
+            <a href="/services/social-media" class="service-link">
+              <span>Learn more</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card-inner">
+          <div class="service-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <div class="service-content">
+            <h3>Brand Identity</h3>
+            <p>Logos and visuals that communicate your mission with integrity and purpose.</p>
+            <a href="/services/brand-identity" class="service-link">
+              <span>Learn more</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="services-cta">
+      <a href="/services" class="text-link">
+        <span>View all services</span>
+        <i class="fas fa-long-arrow-alt-right"></i>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Background patterns -->
+  <div class="bg-pattern pattern-dots"></div>
+  <div class="bg-pattern pattern-lines"></div>
 </section>
 
-<!-- Mission Statement -->
-<section class="mission-section">
+  <!-- About Section -->
+  <section id="about" class="about-section">
     <div class="container">
-        <div class="cross-divider">
-            <span class="cross">✝️</span>
-        </div>
-        <div class="verse-quote">
-            "Therefore everyone who hears these words of mine and puts them into practice is like a wise man who built his house on the rock."
-        </div>
-        <div class="verse-reference">
-            Matthew 7:24
-        </div>
-    </div>
-</section>
-
-<!-- Services Preview -->
-<section class="services-preview" id="services">
-    <div class="container">
-        <div class="section-header">
-            <h2>Our Services</h2>
-            <p>Effective marketing solutions for small businesses built on solid strategy.</p>
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-label">About Us</span>
+          <h2>Who We Are</h2>
+          <div class="section-line"></div>
+          <p>Boulder Marketing brings faith-forward strategy to small businesses. Our student-led team combines fresh perspectives with Christian principles of integrity and service.</p>
+          
+          <div class="values-tags">
+            <span class="tag tag-animated">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Student-Led</span>
+            </span>
+            <span class="tag tag-animated">
+              <i class="fas fa-cross"></i>
+              <span>Christ-First</span>
+            </span>
+            <span class="tag tag-animated">
+              <i class="fas fa-seedling"></i>
+              <span>Purpose-Driven</span>
+            </span>
+          </div>
         </div>
         
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-laptop-code"></i>
+        <div class="approach-card">
+          <div class="approach-card-inner">
+            <h3>Our Approach</h3>
+            <ol class="approach-steps">
+              <li>
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <strong>Discover</strong>
+                  <p>your values and goals</p>
                 </div>
-                <h3>Website Design</h3>
-                <p>Clean, modern, and easy to manage. Built to convert. Our websites reflect your values while engaging your customers.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-hashtag"></i>
+              </li>
+              <li>
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <strong>Create</strong>
+                  <p>a tailored strategy</p>
                 </div>
-                <h3>Social Media</h3>
-                <p>Consistent, purposeful content that engages and grows your audience. Authentic storytelling that resonates with your community.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-paint-brush"></i>
+              </li>
+              <li>
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <strong>Implement</strong>
+                  <p>with excellence</p>
                 </div>
-                <h3>Brand Identity</h3>
-                <p>Logos, colors, and visuals that match your mission. We help small businesses create brands with integrity and purpose.</p>
-            </div>
+              </li>
+              <li>
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <strong>Grow</strong>
+                  <p>your business with purpose</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="approach-card-shape"></div>
         </div>
-        
-        <div class="section-footer">
-            <a href="/services" class="btn btn-secondary">See All Services</a>
-        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- About Preview - REDESIGNED -->
-<section class="about-preview" id="about">
+  <!-- Contact CTA -->
+  <section class="cta-section">
     <div class="container">
-        <div class="about-grid">
-            <div class="about-content">
-                <h2>Who We Are</h2>
-                <p class="about-tagline">Faith-driven marketing with purpose and vision.</p>
-                
-                <p>Boulder Marketing is a student-led agency from the University of Colorado Boulder. We help small businesses grow online with faith-forward strategy, creativity, and purpose that aligns with your values and mission.</p>
-                
-                <div class="values-list">
-                    <div class="value-item">
-                        <span class="value-heading">Student-Led Excellence</span>
-                        <p class="value-text">Bringing fresh perspectives, innovative ideas, and forward-thinking solutions to your brand. Our team combines academic knowledge with real-world application.</p>
-                    </div>
-                    <div class="value-item">
-                        <span class="value-heading">Christ-First Approach</span>
-                        <p class="value-text">Operating with integrity, honesty, and service in everything we do. Our faith guides our decisions and ensures we maintain the highest ethical standards.</p>
-                    </div>
-                    <div class="value-item">
-                        <span class="value-heading">Rooted in Purpose</span>
-                        <p class="value-text">Creating marketing strategies that align with your mission and reflect your authentic values. We believe success comes from staying true to your core principles.</p>
-                    </div>
-                </div>
-                
-                <p>We believe marketing is more than metrics — it's about authentic connection. Our work is values-driven, relationship-focused, and grounded in helping others thrive.</p>
-                
-                <div class="about-cta">
-                    <a href="/about" class="btn btn-secondary">Learn More About Us</a>
-                </div>
-            </div>
-            
-            <div class="about-image">
-                <img src="/images/team-image.jpg" alt="Boulder Marketing Team">
-            </div>
-        </div>
+      <div class="cta-content">
+        <h2>Ready to grow your business with purpose?</h2>
+        <p class="cta-subtitle">Let's build something meaningful together</p>
+        <a href="/contact" class="btn btn-white btn-glow">Contact Us</a>
+      </div>
     </div>
-</section>
-
-<!-- Testimonial Section -->
-<section class="testimonial-section">
-    <div class="container">
-        <div class="section-header">
-            <h2>What Our Clients Say</h2>
-        </div>
-        
-        <div class="testimonial-cards">
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <div class="quote-mark">"</div>
-                    <p>Working with Boulder Marketing gave our small business a huge online boost. Professional, kind, and truly understanding of our values — highly recommend!</p>
-                    <div class="client-info">
-                        <div class="client-name">Jane Smith</div>
-                        <div class="client-business">Local Cafe Owner</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <div class="quote-mark">"</div>
-                    <p>Their team created a brand that truly reflects our values and mission. The work they did helped us connect with our community in authentic ways.</p>
-                    <div class="client-info">
-                        <div class="client-name">Michael Johnson</div>
-                        <div class="client-business">Non-Profit Director</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <div class="quote-mark">"</div>
-                    <p>It's so refreshing to work with a marketing team that understands and respects our faith-based approach. They helped us communicate our values while growing our business.</p>
-                    <div class="client-info">
-                        <div class="client-name">Sarah Williams</div>
-                        <div class="client-business">Christian Bookstore Owner</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="cta-section">
-    <div class="container">
-        <div class="cta-wrapper">
-            <h2>Ready to grow your business?</h2>
-            <p>Let's talk about how we can bring your brand to life online, aligned with your values and purpose.</p>
-            <div class="cta-buttons">
-                <a href="/contact" class="btn btn-white">Let's Work Together</a>
-                <a href="/services" class="btn btn-outline-white">View Services</a>
-            </div>
-        </div>
-    </div>
-</section>
+    <div class="cta-shape"></div>
+  </section>
+</main>
 
 <!-- Scroll to top button -->
-<a href="#" class="scroll-top">
-    <i class="fas fa-arrow-up"></i>
+<a href="#" class="scroll-top" aria-label="Scroll to top">
+  <i class="fas fa-chevron-up"></i>
 </a>
+
+{{!-- Include JavaScript for animations and slider --}}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Reveal text animation on page load
+    setTimeout(function() {
+      document.querySelectorAll('.reveal-text').forEach(function(el, index) {
+        setTimeout(function() {
+          el.classList.add('revealed');
+        }, index * 200);
+      });
+    }, 500);
+
+    // Scroll reveal for elements
+    const revealElements = document.querySelectorAll('[data-aos]');
+    const revealOnScroll = function() {
+      revealElements.forEach(function(el) {
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
+          el.classList.add('revealed');
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Initial check
+
+    // Scroll to top button
+    const scrollTopButton = document.querySelector('.scroll-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        scrollTopButton.classList.add('show');
+      } else {
+        scrollTopButton.classList.remove('show');
+      }
+    });
+
+    scrollTopButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+{{!-- Include JavaScript for testimonial slider and animations --}}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Testimonial slider functionality
+    const testimonials = document.querySelectorAll('.testimonial');
+    const dots = document.querySelectorAll('.dot');
+    const prevButton = document.querySelector('.slider-arrow.prev');
+    const nextButton = document.querySelector('.slider-arrow.next');
+    let currentIndex = 0;
+
+    function showTestimonial(index) {
+      testimonials.forEach(testimonial => {
+        testimonial.classList.remove('active');
+      });
+      dots.forEach(dot => {
+        dot.classList.remove('active');
+      });
+      
+      testimonials[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentIndex = index;
+    }
+
+    // Click events for dots
+    dots.forEach(dot => {
+      dot.addEventListener('click', function() {
+        const slideIndex = parseInt(this.getAttribute('data-slide'));
+        showTestimonial(slideIndex);
+      });
+    });
+
+    // Previous testimonial
+    prevButton.addEventListener('click', function() {
+      let newIndex = currentIndex - 1;
+      if (newIndex < 0) {
+        newIndex = testimonials.length - 1;
+      }
+      showTestimonial(newIndex);
+    });
+
+    // Next testimonial
+    nextButton.addEventListener('click', function() {
+      let newIndex = currentIndex + 1;
+      if (newIndex >= testimonials.length) {
+        newIndex = 0;
+      }
+      showTestimonial(newIndex);
+    });
+
+    // Auto-rotate testimonials
+    setInterval(function() {
+      let newIndex = currentIndex + 1;
+      if (newIndex >= testimonials.length) {
+        newIndex = 0;
+      }
+      showTestimonial(newIndex);
+    }, 6000);
+
+    // Scroll to top button
+    const scrollTopButton = document.querySelector('.scroll-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        scrollTopButton.classList.add('show');
+      } else {
+        scrollTopButton.classList.remove('show');
+      }
+    });
+
+    scrollTopButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>

@@ -1,10 +1,9 @@
 /**
- * Boulder Marketing - Main JavaScript
- * Christ-first, Student-led, Rooted in purpose
+ * Boulder Marketing - Home Page JavaScript
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Header scroll effect
+  // Scroll animation for header
   const header = document.querySelector('.site-header');
   const scrollTopBtn = document.querySelector('.scroll-top');
   
@@ -24,37 +23,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Mobile navigation toggle
-  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-  const navList = document.querySelector('.nav-list');
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
   
-  if (mobileMenuToggle && navList) {
-    mobileMenuToggle.addEventListener('click', function() {
-      navList.classList.toggle('active');
-      this.classList.toggle('active');
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-      if (navList.classList.contains('active') && !event.target.closest('.main-nav') && event.target !== mobileMenuToggle) {
-        navList.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
-      }
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
     });
   }
   
-  // Smooth scrolling for anchor links
+  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       if (this.getAttribute('href') !== '#') {
         e.preventDefault();
         
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
           const headerHeight = document.querySelector('.site-header').offsetHeight;
-          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
           const offsetPosition = targetPosition - headerHeight;
           
           window.scrollTo({
@@ -63,20 +52,18 @@ document.addEventListener('DOMContentLoaded', function() {
           });
           
           // Close mobile menu if open
-          if (navList && navList.classList.contains('active')) {
-            navList.classList.remove('active');
-            mobileMenuToggle.classList.remove('active');
+          if (navMenu && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
           }
         }
       }
     });
   });
   
-  // Scroll to top button functionality
-  const scrollTop = document.querySelector('.scroll-top');
-  
-  if (scrollTop) {
-    scrollTop.addEventListener('click', function(e) {
+  // Scroll to top button
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', function(e) {
       e.preventDefault();
       window.scrollTo({
         top: 0,
@@ -85,113 +72,87 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Testimonial card hover effect enhancement
-  const testimonialCards = document.querySelectorAll('.testimonial-card');
-  if (testimonialCards.length > 0) {
-    testimonialCards.forEach(card => {
-      card.addEventListener('mouseenter', function() {
-        testimonialCards.forEach(c => c.classList.remove('active'));
-        this.classList.add('active');
+  // Testimonial slider
+  const testimonials = document.querySelectorAll('.testimonial');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.slider-arrow.prev');
+  const nextBtn = document.querySelector('.slider-arrow.next');
+  
+  if (testimonials.length > 0) {
+    let currentSlide = 0;
+    
+    // Function to switch slide
+    function showSlide(index) {
+      // Handle bounds
+      if (index < 0) index = testimonials.length - 1;
+      if (index >= testimonials.length) index = 0;
+      
+      // Update current slide index
+      currentSlide = index;
+      
+      // Hide all slides and remove active class from dots
+      testimonials.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      // Show current slide and set active dot
+      testimonials[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+      
+      // Set wrapper height based on active slide height
+      const wrapper = document.querySelector('.testimonial-wrapper');
+      const activeSlide = testimonials[currentSlide];
+      wrapper.style.height = `${activeSlide.offsetHeight}px`;
+    }
+    
+    // Set initial slide and wrapper height
+    showSlide(0);
+    
+    // Event listeners for next/prev buttons
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+    }
+    
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+    }
+    
+    // Event listeners for dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showSlide(index));
+    });
+    
+    // Auto rotate testimonials
+    let slideInterval = setInterval(() => showSlide(currentSlide + 1), 7000);
+    
+    // Pause auto rotation on hover
+    const sliderContainer = document.querySelector('.testimonial-slider');
+    
+    if (sliderContainer) {
+      sliderContainer.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
       });
-    });
-    
-    // Set the first card as active by default
-    testimonialCards[0].classList.add('active');
-  }
-  
-  // Form validation
-  const contactForm = document.getElementById('contact-form');
-  
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(event) {
-      let isValid = true;
       
-      // Get form fields
-      const nameField = document.getElementById('name');
-      const emailField = document.getElementById('email');
-      
-      // Validate name
-      if (!nameField.value.trim()) {
-        isValid = false;
-        showError(nameField, 'Please enter your name');
-      } else {
-        removeError(nameField);
-      }
-      
-      // Validate email
-      if (!emailField.value.trim()) {
-        isValid = false;
-        showError(emailField, 'Please enter your email');
-      } else if (!isValidEmail(emailField.value.trim())) {
-        isValid = false;
-        showError(emailField, 'Please enter a valid email address');
-      } else {
-        removeError(emailField);
-      }
-      
-      // If form is not valid, prevent submission
-      if (!isValid) {
-        event.preventDefault();
-      }
-    });
-    
-    // Helper functions for form validation
-    function showError(field, message) {
-      // Remove any existing error
-      removeError(field);
-      
-      // Add error class to field
-      field.classList.add('error');
-      
-      // Create and append error message
-      const errorMessage = document.createElement('div');
-      errorMessage.className = 'error-message';
-      errorMessage.textContent = message;
-      
-      // Insert error message after the field
-      field.parentNode.insertBefore(errorMessage, field.nextSibling);
-    }
-    
-    function removeError(field) {
-      // Remove error class
-      field.classList.remove('error');
-      
-      // Remove any existing error message
-      const errorMessage = field.parentNode.querySelector('.error-message');
-      if (errorMessage) {
-        errorMessage.remove();
-      }
-    }
-    
-    function isValidEmail(email) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    }
-    
-    // Remove error indication when field is changed
-    contactForm.querySelectorAll('input, textarea, select').forEach(field => {
-      field.addEventListener('input', function() {
-        removeError(this);
+      sliderContainer.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(() => showSlide(currentSlide + 1), 7000);
       });
+    }
+    
+    // Update slide height on window resize
+    window.addEventListener('resize', () => {
+      showSlide(currentSlide);
     });
   }
   
-  // Add subtle animation to values list
-  const valueItems = document.querySelectorAll('.value-item');
-  if (valueItems.length > 0) {
-    // Add animation delay to each value item
-    valueItems.forEach((item, index) => {
-      item.style.animationDelay = (index * 0.2) + 's';
+  // Scroll indicator fade out on scroll
+  const scrollIndicator = document.querySelector('.scroll-indicator');
+  
+  if (scrollIndicator) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100) {
+        scrollIndicator.style.opacity = '0';
+      } else {
+        scrollIndicator.style.opacity = '0.7';
+      }
     });
-  }
-  
-  // Add scripture verse to footer - this is already in the HTML now, so we're removing the JS code
-  // that was previously adding it dynamically
-  
-  // Dynamic copyright year
-  const yearElement = document.querySelector('.copyright');
-  if (yearElement) {
-    const year = new Date().getFullYear();
-    yearElement.innerHTML = yearElement.innerHTML.replace(/\d{4}/, year);
   }
 });

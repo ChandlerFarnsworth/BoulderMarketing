@@ -3,14 +3,28 @@
     <div class="container">
         <h1>Portfolio</h1>
     </div>
+    <div class="page-header-shape"></div>
 </section>
 
 <!-- Portfolio Intro -->
 <section class="portfolio-intro">
     <div class="container">
         <div class="section-header">
+            <span class="section-label">Our Work</span>
             <h2>Real Results. Real People.</h2>
-            <p>See how we've helped small businesses grow online.</p>
+        </div>
+        <p class="intro-tagline">See how we've helped small businesses grow online with purpose-driven marketing.</p>
+    </div>
+</section>
+
+<!-- Portfolio Filters -->
+<section class="portfolio-filters">
+    <div class="container">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Websites</button>
+            <button class="filter-btn" data-filter="brand">Branding</button>
+            <button class="filter-btn" data-filter="social">Social Media</button>
         </div>
     </div>
 </section>
@@ -20,36 +34,175 @@
     <div class="container">
         <div class="portfolio-grid">
             <!-- Portfolio Item 1 -->
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="0">
                 <div class="portfolio-image">
                     <img src="/images/portfolio-1.jpg" alt="Local Cafe Website">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <span class="project-category">Website Design</span>
+                            <a href="/portfolio/local-cafe" class="view-project">View Project</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="portfolio-info">
                     <h3>Local Cafe</h3>
                     <p>Website Design, SEO</p>
+                    <div class="results-tag">
+                        <span>+120% Traffic Increase</span>
+                    </div>
                 </div>
             </div>
             
             <!-- Portfolio Item 2 -->
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
                 <div class="portfolio-image">
                     <img src="/images/portfolio-2.jpg" alt="Boutique Shop Website">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <span class="project-category">E-commerce</span>
+                            <a href="/portfolio/boutique-shop" class="view-project">View Project</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="portfolio-info">
                     <h3>Boutique Shop</h3>
                     <p>E-commerce, Website Design</p>
+                    <div class="results-tag">
+                        <span>+85% Online Sales</span>
+                    </div>
                 </div>
             </div>
             
             <!-- Portfolio Item 3 -->
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="brand" data-aos="fade-up" data-aos-delay="200">
                 <div class="portfolio-image">
                     <img src="/images/portfolio-3.jpg" alt="Local Bakery Branding">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <span class="project-category">Brand Identity</span>
+                            <a href="/portfolio/local-bakery" class="view-project">View Project</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="portfolio-info">
                     <h3>Local Bakery</h3>
                     <p>Logo Design, Brand Identity</p>
+                    <div class="results-tag">
+                        <span>+40% Brand Recognition</span>
+                    </div>
                 </div>
+            </div>
+            
+            <!-- Portfolio Item 4 -->
+            <div class="portfolio-item" data-category="social" data-aos="fade-up" data-aos-delay="300">
+                <div class="portfolio-image">
+                    <img src="/images/portfolio-4.jpg" alt="Fitness Studio Social Media">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <span class="project-category">Social Media</span>
+                            <a href="/portfolio/fitness-studio" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Fitness Studio</h3>
+                    <p>Social Media Management, Content Creation</p>
+                    <div class="results-tag">
+                        <span>+230% Engagement</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Item 5 -->
+            <div class="portfolio-item" data-category="brand" data-aos="fade-up" data-aos-delay="400">
+                <div class="portfolio-image">
+                    <img src="/images/portfolio-5.jpg" alt="Nonprofit Organization Branding">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <span class="project-category">Branding</span>
+                            <a href="/portfolio/nonprofit" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Nonprofit Organization</h3>
+                    <p>Brand Identity, Website Design</p>
+                    <div class="results-tag">
+                        <span>+50% Donor Engagement</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Item 6 -->
+            <div class="portfolio-item" data-category="social" data-aos="fade-up" data-aos-delay="500">
+                <div class="portfolio-image">
+                    <img src="/images/portfolio-6.jpg" alt="Local Restaurant Social Media">
+                    <div class="portfolio-overlay">
+                        <div class="overlay-content">
+                            <span class="project-category">Social Media</span>
+                            <a href="/portfolio/restaurant" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Local Restaurant</h3>
+                    <p>Social Media, Content Strategy</p>
+                    <div class="results-tag">
+                        <span>+35% Reservations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Background patterns -->
+    <div class="bg-pattern pattern-dots portfolio-pattern-1"></div>
+    <div class="bg-pattern pattern-lines portfolio-pattern-2"></div>
+</section>
+
+<!-- Process Showcase -->
+<section class="process-showcase">
+    <div class="container">
+        <div class="process-content">
+            <div class="process-text">
+                <span class="section-label">Our Approach</span>
+                <h2>How We Bring Vision to Life</h2>
+                <p>Every project begins with understanding your unique goals and values. We then create a tailored strategy that aligns with your mission and resonates with your audience.</p>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">
+                            <h3>Discovery</h3>
+                            <p>Understanding your business, values, and goals</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">
+                            <h3>Strategy</h3>
+                            <p>Developing a tailored plan aligned with your mission</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">
+                            <h3>Creation</h3>
+                            <p>Building assets that bring your vision to life</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-text">
+                            <h3>Results</h3>
+                            <p>Measuring success and refining for growth</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="/services" class="btn btn-primary mt-4">Learn About Our Services</a>
+            </div>
+            <div class="process-image">
+                <img src="/images/process-illustration.jpg" alt="Our Process" class="rounded-image">
+                <div class="image-accent"></div>
             </div>
         </div>
     </div>
@@ -59,19 +212,119 @@
 <section class="testimonials-section">
     <div class="container">
         <div class="section-header">
+            <span class="section-label">What Clients Say</span>
             <h2>Client Testimonials</h2>
         </div>
         
         <div class="testimonials-grid">
-            <div class="testimonial-card">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
                 <div class="testimonial-content">
-                    <p>"Working with Boulder Marketing gave our small business a huge online boost. Professional, kind, and affordable — highly recommend!"</p>
+                    <p>"Working with Boulder Marketing gave our small business a huge online boost. Professional, kind, and truly understanding of our values. The results exceeded our expectations!"</p>
                 </div>
                 <div class="client-info">
-                    <h4>Jane Smith</h4>
-                    <p>Local Cafe Owner</p>
+                    <div class="client-avatar">
+                        <span>JS</span>
+                    </div>
+                    <div class="client-details">
+                        <h4>Jane Smith</h4>
+                        <p>Local Cafe Owner</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="testimonial-content">
+                    <p>"Their team created a brand that truly reflects our values and mission. The work they did helped us connect with our community in meaningful ways."</p>
+                </div>
+                <div class="client-info">
+                    <div class="client-avatar">
+                        <span>MJ</span>
+                    </div>
+                    <div class="client-details">
+                        <h4>Michael Johnson</h4>
+                        <p>Non-Profit Director</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <div class="testimonial-content">
+                    <p>"Our social media presence has completely transformed since working with Boulder Marketing. They understand our audience and create content that truly resonates."</p>
+                </div>
+                <div class="client-info">
+                    <div class="client-avatar">
+                        <span>SW</span>
+                    </div>
+                    <div class="client-details">
+                        <h4>Sarah Williams</h4>
+                        <p>Boutique Owner</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- CTA Section -->
+<section class="portfolio-cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to transform your online presence?</h2>
+            <p>Let's build something that brings your vision to life and connects with your audience.</p>
+            <a href="/contact" class="btn btn-white btn-glow">Start Your Project</a>
+        </div>
+    </div>
+    <div class="cta-shape"></div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Portfolio filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Get filter value
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Filter portfolio items
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Reveal elements on scroll
+        const revealElements = document.querySelectorAll('[data-aos]');
+        const revealOnScroll = function() {
+            revealElements.forEach(function(el) {
+                if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
+                    el.classList.add('revealed');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+    });
+</script>

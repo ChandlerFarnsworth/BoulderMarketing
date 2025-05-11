@@ -1,119 +1,215 @@
 /* 
  * Boulder Marketing - Header Styles
+ * Modern tech-focused design with brand colors
  */
 
  .site-header {
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.site-header.scrolled {
+  padding: 0.7rem 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 3px 15px rgba(172, 130, 85, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  transition: opacity 0.3s ease;
+}
+
+.logo a:hover {
+  opacity: 0.85;
+}
+
+.logo img {
+  max-height: 38px;
+  margin-right: 0.6rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list li {
+  margin-left: 2rem;
+}
+
+.nav-list a {
+  color: var(--text-dark);
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after,
+.nav-list a.active::after {
+  width: 100%;
+}
+
+.nav-list a.active,
+.nav-list a:hover {
+  color: var(--primary-color);
+}
+
+/* Contact link styling */
+.contact-link {
+  color: var(--primary-color) !important;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.contact-link::after {
+  background: var(--primary-color);
+}
+
+.contact-link:hover, 
+.contact-link.active {
+  color: var(--primary-dark) !important;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  position: relative;
+  z-index: 101;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+  color: var(--primary-color);
+}
+
+.mobile-icon-open, .mobile-icon-close {
+  transition: all 0.3s ease;
+}
+
+.mobile-icon-close {
+  position: absolute;
+  opacity: 0;
+  transform: rotate(-90deg) scale(0);
+}
+
+.mobile-menu-toggle.open .mobile-icon-open {
+  opacity: 0;
+  transform: rotate(90deg) scale(0);
+}
+
+.mobile-menu-toggle.open .mobile-icon-close {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
     background-color: var(--white);
-    box-shadow: var(--shadow-sm);
-    padding: var(--spacing-sm) 0;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 2rem 2rem;
+    transition: right 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 99;
+  }
+  
+  .nav-list.active {
+    right: 0;
+  }
+  
+  .nav-list li {
+    margin: 0 0 1.2rem;
+    width: 100%;
+  }
+  
+  .nav-list a {
+    display: block;
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+  
+  .btn-nav {
+    display: inline-block;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  body.menu-open {
+    overflow: hidden;
+  }
+  
+  body.menu-open::after {
+    content: '';
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
-    transition: all var(--transition-fast);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 98;
   }
-  
-  .site-header.scrolled {
-    padding: var(--spacing-xs) 0;
-    background-color: rgba(255, 255, 255, 0.98);
-    box-shadow: var(--shadow-md);
+}
+
+/* Animations for page transitions */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .logo a {
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: var(--primary-color);
-  }
-  
-  .logo img {
-    max-height: 38px;
-    margin-right: var(--spacing-xs);
-  }
-  
-  .nav-list {
-    display: flex;
-  }
-  
-  .nav-list li {
-    margin-left: var(--spacing-md);
-  }
-  
-  .nav-list a {
-    color: var(--text-dark);
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 5px;
-  }
-  
-  .nav-list a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    transition: width var(--transition-fast);
-  }
-  
-  .nav-list a:hover::after,
-  .nav-list a.active::after {
-    width: 100%;
-  }
-  
-  .nav-list a.active,
-  .nav-list a:hover {
-    color: var(--primary-color);
-  }
-  
-  .mobile-menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--text-dark);
-    font-size: 1.2rem;
-  }
-  
-  /* Mobile menu */
-  @media (max-width: 768px) {
-    .nav-list {
-      position: fixed;
-      top: 72px;
-      left: 0;
-      width: 100%;
-      background-color: var(--white);
-      box-shadow: var(--shadow-md);
-      flex-direction: column;
-      align-items: center;
-      padding: var(--spacing-md) 0;
-      transform: translateY(-100%);
-      opacity: 0;
-      visibility: hidden;
-      transition: all var(--transition-fast);
-      z-index: 98;
-    }
-    
-    .nav-list.active {
-      transform: translateY(0);
-      opacity: 1;
-      visibility: visible;
-    }
-    
-    .nav-list li {
-      margin: var(--spacing-xs) 0;
-    }
-    
-    .mobile-menu-toggle {
-      display: block;
-    }
-  }
+}
+
+.site-header {
+  animation: fadeInDown 0.5s ease-out;
+}
