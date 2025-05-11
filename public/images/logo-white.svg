@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <!-- Boulder Marketing Logo - Faith and Mountain Theme (White Version) -->
+  <defs>
+    <linearGradient id="mountainGradientWhite" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e0e0e0" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Boulder/Mountain Shape -->
+  <path d="M10,40 L20,25 L25,30 L35,15 L45,35 L10,40" fill="url(#mountainGradientWhite)" />
+  
+  <!-- Cross Symbol -->
+  <path d="M28,10 L28,30 M22,15 L34,15" stroke="#f9a825" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Company Name -->
+  <text x="55" y="30" font-family="Montserrat, Arial" font-size="18" font-weight="700" fill="#ffffff">Boulder</text>
+  <text x="130" y="30" font-family="Montserrat, Arial" font-size="18" font-weight="700" fill="#4caf50">Marketing</text>
+</svg>

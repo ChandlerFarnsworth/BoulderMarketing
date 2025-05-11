@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./views:/app/views
+      - ./public:/app/public
+      - ./server.js:/app/server.js
+    environment:
+      - NODE_ENV=development

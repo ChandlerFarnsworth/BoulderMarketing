@@ -1,0 +1,26 @@
+<header class="site-header">
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/logo.svg" alt="Boulder Marketing Logo">
+                    <span>Boulder Marketing</span>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-list">
+                    <li><a href="/" class="{{#if (eq pageClass 'home-page')}}active{{/if}}">Home</a></li>
+                    <li><a href="/about" class="{{#if (eq pageClass 'about-page')}}active{{/if}}">About</a></li>
+                    <li><a href="/services" class="{{#if (eq pageClass 'services-page')}}active{{/if}}">Services</a></li>
+                    <li><a href="/portfolio" class="{{#if (eq pageClass 'portfolio-page')}}active{{/if}}">Portfolio</a></li>
+                    <li><a href="/contact" class="{{#if (eq pageClass 'contact-page')}}active{{/if}}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
