@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boulder Marketing - Student-led, Christ-first marketing agency helping small businesses grow online with affordable, strategy-driven marketing.">
+    <title></title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="">
+    <header class="site-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/logo.svg" alt="Boulder Marketing Logo">
+                        <span>Boulder Marketing</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                        <i class="fas fa-bars mobile-icon-open"></i>
+                        <i class="fas fa-times mobile-icon-close"></i>
+                    </button>
+                    
+                    <ul class="nav-list">
+                        <li><a href="/" class="">Home</a></li>
+                        <li><a href="/about" class="">About</a></li>
+                        <li><a href="/services" class="">Services</a></li>
+                        <li><a href="/portfolio" class="">Portfolio</a></li>
+                        <li><a href="/contact" class="contact-link ">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header scroll effect
+            const header = document.querySelector('.site-header');
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navList = document.querySelector('.nav-list');
+            
+            // Scroll effect
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Initialize header state on page load
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            }
+            
+            // Mobile menu toggle
+            mobileMenuToggle.addEventListener('click', function() {
+                navList.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+                mobileMenuToggle.classList.toggle('open');
+            });
+        });
+    </script>    
+    <main>
+        <!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Contact Us</h1>
+    </div>
+    <div class="page-header-shape"></div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Get In Touch</span>
+            <h2>Let's Build Something Together</h2>
+        </div>
+        
+        <div class="contact-intro">
+            <p class="intro-text">Ready to transform your online presence? We're here to help bring your vision to life. Whether you need a full package or just some guidance, let's start a conversation.</p>
+        </div>
+        
+        <div class="contact-grid">
+            <div class="contact-form-container">
+                <div class="form-header">
+                    <h3>Send Us a Message</h3>
+                    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                </div>
+                
+                <form id="contact-form" class="contact-form" action="/contact-submit" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <span class="input-icon"><i class="far fa-user"></i></span>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <span class="input-icon"><i class="far fa-envelope"></i></span>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="business">Business Name</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon"><i class="far fa-building"></i></span>
+                            <input type="text" id="business" name="business" placeholder="Your business name (optional)">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">What are you looking for? <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <span class="input-icon"><i class="fas fa-briefcase"></i></span>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="website">Website Design</option>
+                                <option value="social">Social Media Management</option>
+                                <option value="branding">Brand Identity</option>
+                                <option value="strategy">Marketing Strategy</option>
+                                <option value="content">Content Creation</option>
+                                <option value="other">Other/Not Sure Yet</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <div class="input-wrapper textarea-wrapper">
+                            <span class="input-icon"><i class="far fa-comment-alt"></i></span>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project or ask us a question..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" name="subscribe" id="subscribe">
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">Subscribe to our newsletter for marketing tips and updates</span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="far fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="contact-info-container">
+                <div class="contact-info">
+                    <div class="info-header">
+                        <h3>Contact Information</h3>
+                        <p>Here are the ways you can reach us</p>
+                    </div>
+                    
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="far fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email Us</h4>
+                                <p><a href="mailto:chandler@bouldermarketing.net">chandler@bouldermarketing.net</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="far fa-calendar-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Schedule a Call</h4>
+                                <p><a href="#" class="schedule-link">Book a free consultation <i class="fas fa-arrow-right"></i></a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Response Time</h4>
+                                <p>We typically respond within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Location</h4>
+                                <p>Boulder, Colorado</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Connect With Us</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-image">
+                    <img src="/images/contact-image.jpg" alt="Let's work together" class="rounded-image">
+                    <div class="image-accent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Background patterns -->
+    <div class="bg-pattern pattern-dots contact-pattern-1"></div>
+    <div class="bg-pattern pattern-lines contact-pattern-2"></div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Questions?</span>
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" data-aos="fade-up" data-aos-delay="0">
+                    <button class="question-toggle">
+                        <span>What does the process look like?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our process begins with a discovery call to understand your needs. From there, we'll develop a custom proposal, create a strategy, and begin implementation. We follow a four-step approach: Discovery, Strategy, Creation, and Launch.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" data-aos="fade-up" data-aos-delay="100">
+                    <button class="question-toggle">
+                        <span>How much do your services cost?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our pricing varies based on project scope and your specific needs. We offer both project-based and retainer options to fit different budgets. Contact us for a custom quote tailored to your business requirements.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" data-aos="fade-up" data-aos-delay="200">
+                    <button class="question-toggle">
+                        <span>How long does a typical project take?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Project timelines vary based on scope and complexity. A website design typically takes 4-6 weeks, while branding projects range from 2-4 weeks. Social media management is ongoing. We'll provide specific timelines in your custom proposal.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" data-aos="fade-up" data-aos-delay="300">
+                    <button class="question-toggle">
+                        <span>Do you work with businesses outside of Boulder?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We work with clients across the country. While we're based in Boulder, Colorado, we can collaborate effectively through video calls, email, and collaborative tools to serve clients anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="contact-cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to get started?</h2>
+            <p>Let's work together to bring your vision to life.</p>
+            <a href="#contact-form" class="btn btn-white btn-glow scroll-to-form">Start Your Project</a>
+        </div>
+    </div>
+    <div class="cta-shape"></div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // FAQ accordion functionality
+        const questionToggles = document.querySelectorAll('.question-toggle');
+        
+        questionToggles.forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const faqItem = this.closest('.faq-item');
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    const icon = item.querySelector('.fas');
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                });
+                
+                // If clicked item wasn't active, open it
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    const icon = this.querySelector('.fas');
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                }
+            });
+        });
+        
+        // Scroll to form functionality
+        const scrollToFormBtn = document.querySelector('.scroll-to-form');
+        if (scrollToFormBtn) {
+            scrollToFormBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const formElement = document.querySelector('#contact-form');
+                if (formElement) {
+                    formElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+        
+        // Reveal elements on scroll
+        const revealElements = document.querySelectorAll('[data-aos]');
+        const revealOnScroll = function() {
+            revealElements.forEach(function(el) {
+                if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
+                    el.classList.add('revealed');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+    });
+</script>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/images/footer-logo.svg" alt="Boulder Marketing Logo">
+                        <h3>Boulder Marketing</h3>
+                    </div>
+                    <p class="footer-tagline">Marketing Built on the Rock</p>
+                    <div class="footer-verse">
+                        <div class="verse-quote">
+                            "Therefore everyone who hears these words of mine and puts them into practice is like a wise man who built his house on the rock."
+                        </div>
+                        <div class="verse-reference">
+                            Matthew 7:24
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <a href="mailto:chandler@bouldermarketing.net" class="footer-email">
+                        <i class="far fa-envelope"></i> chandler@bouldermarketing.net
+                    </a>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/bouldermarketing" target="_blank" aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/boulder-marketing" target="_blank" aria-label="Follow us on LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://facebook.com/bouldermarketing" target="_blank" aria-label="Follow us on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; Boulder Marketing 2025. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery (Only if needed for testimonial slider) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

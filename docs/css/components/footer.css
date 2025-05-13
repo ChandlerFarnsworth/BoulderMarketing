@@ -1,0 +1,154 @@
+/* 
+ * Boulder Marketing - Footer Styles
+ */
+
+ .site-footer {
+    background-color: var(--text-dark);
+    color: var(--bg-light);
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+  }
+  
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .footer-brand {
+    max-width: 400px;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .footer-logo img {
+    height: 40px;
+    margin-right: var(--spacing-sm);
+  }
+  
+  .footer-logo h3 {
+    color: white;
+    margin-bottom: 0;
+  }
+  
+  .footer-tagline {
+    color: var(--primary-color);
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .footer-verse {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-verse .verse-quote {
+    color: var(--bg-light);
+    opacity: 0.8;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  .footer-verse .verse-reference {
+    text-align: left;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+  }
+  
+  .footer-contact h4,
+  .footer-nav h4 {
+    color: white;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.2rem;
+  }
+  
+  .footer-email {
+    display: inline-block;
+    color: var(--bg-light);
+    margin-bottom: var(--spacing-md);
+    transition: color var(--transition-fast);
+  }
+  
+  .footer-email:hover {
+    color: var(--primary-color);
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+  
+  .footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--bg-light);
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+  }
+  
+  .footer-social a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+  }
+  
+  .footer-links li {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .footer-links a {
+    color: var(--bg-light);
+    transition: all var(--transition-fast);
+    position: relative;
+    padding-left: 0;
+    display: inline-block;
+  }
+  
+  .footer-links a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+  }
+  
+  .footer-bottom {
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+  
+  .copyright {
+    font-size: 0.9rem;
+    color: var(--bg-light);
+    opacity: 0.7;
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 992px) {
+    .footer-main {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-brand {
+      grid-column: span 2;
+      margin-bottom: var(--spacing-md);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-main {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+    }
+    
+    .footer-brand {
+      grid-column: span 1;
+    }
+  }

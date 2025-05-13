@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boulder Marketing - Student-led, Christ-first marketing agency helping small businesses grow online with affordable, strategy-driven marketing.">
+    <title></title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="">
+    <header class="site-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/logo.svg" alt="Boulder Marketing Logo">
+                        <span>Boulder Marketing</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                        <i class="fas fa-bars mobile-icon-open"></i>
+                        <i class="fas fa-times mobile-icon-close"></i>
+                    </button>
+                    
+                    <ul class="nav-list">
+                        <li><a href="/" class="">Home</a></li>
+                        <li><a href="/about" class="">About</a></li>
+                        <li><a href="/services" class="">Services</a></li>
+                        <li><a href="/portfolio" class="">Portfolio</a></li>
+                        <li><a href="/contact" class="contact-link ">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header scroll effect
+            const header = document.querySelector('.site-header');
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navList = document.querySelector('.nav-list');
+            
+            // Scroll effect
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Initialize header state on page load
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            }
+            
+            // Mobile menu toggle
+            mobileMenuToggle.addEventListener('click', function() {
+                navList.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+                mobileMenuToggle.classList.toggle('open');
+            });
+        });
+    </script>    
+    <main>
+        <!-- Thank You Section -->
+<section class="thank-you-section">
+    <div class="container">
+        <div class="thank-you-content">
+            <div class="thank-you-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h1>Thank You!</h1>
+            <p>Your message has been sent successfully. We'll be in touch with you shortly.</p>
+            <div class="next-steps">
+                <h3>What's Next?</h3>
+                <p>We'll review your information and reach out within 1-2 business days to discuss how we can help your business grow.</p>
+            </div>
+            <div class="return-home">
+                <a href="/" class="btn btn-primary">Return to Homepage</a>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/images/footer-logo.svg" alt="Boulder Marketing Logo">
+                        <h3>Boulder Marketing</h3>
+                    </div>
+                    <p class="footer-tagline">Marketing Built on the Rock</p>
+                    <div class="footer-verse">
+                        <div class="verse-quote">
+                            "Therefore everyone who hears these words of mine and puts them into practice is like a wise man who built his house on the rock."
+                        </div>
+                        <div class="verse-reference">
+                            Matthew 7:24
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <a href="mailto:chandler@bouldermarketing.net" class="footer-email">
+                        <i class="far fa-envelope"></i> chandler@bouldermarketing.net
+                    </a>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/bouldermarketing" target="_blank" aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/boulder-marketing" target="_blank" aria-label="Follow us on LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://facebook.com/bouldermarketing" target="_blank" aria-label="Follow us on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; Boulder Marketing 2025. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery (Only if needed for testimonial slider) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

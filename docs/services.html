@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boulder Marketing - Student-led, Christ-first marketing agency helping small businesses grow online with affordable, strategy-driven marketing.">
+    <title></title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="">
+    <header class="site-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/logo.svg" alt="Boulder Marketing Logo">
+                        <span>Boulder Marketing</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                        <i class="fas fa-bars mobile-icon-open"></i>
+                        <i class="fas fa-times mobile-icon-close"></i>
+                    </button>
+                    
+                    <ul class="nav-list">
+                        <li><a href="/" class="">Home</a></li>
+                        <li><a href="/about" class="">About</a></li>
+                        <li><a href="/services" class="">Services</a></li>
+                        <li><a href="/portfolio" class="">Portfolio</a></li>
+                        <li><a href="/contact" class="contact-link ">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header scroll effect
+            const header = document.querySelector('.site-header');
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navList = document.querySelector('.nav-list');
+            
+            // Scroll effect
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Initialize header state on page load
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            }
+            
+            // Mobile menu toggle
+            mobileMenuToggle.addEventListener('click', function() {
+                navList.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+                mobileMenuToggle.classList.toggle('open');
+            });
+        });
+    </script>    
+    <main>
+        <!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Our Services</h1>
+    </div>
+    <div class="page-header-shape"></div>
+</section>
+
+<!-- Services Intro -->
+<section class="services-intro">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">What We Offer</span>
+            <h2>Strategic Marketing Solutions</h2>
+        </div>
+        <div class="intro-content">
+            <p class="intro-tagline">Simple, affordable marketing services — done with purpose. Whether you're just starting or need a refresh, we've got your back.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="services-detail-section">
+    <div class="container">
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="service-card-inner">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Website Design</h3>
+                        <p>Clean, modern, and easy to manage websites built to convert visitors into customers.</p>
+                        <ul class="service-features">
+                            <li>Responsive design for all devices</li>
+                            <li>SEO-optimized structure</li>
+                            <li>Easy content management</li>
+                            <li>Brand-aligned user experience</li>
+                        </ul>
+                        <a href="/services/website-design" class="service-link">
+                            <span>Learn more</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card-inner">
+                    <div class="service-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Social Media Management</h3>
+                        <p>Consistent, purposeful content that engages your audience and grows your online presence.</p>
+                        <ul class="service-features">
+                            <li>Content strategy development</li>
+                            <li>Regular posting schedule</li>
+                            <li>Audience engagement</li>
+                            <li>Performance analytics</li>
+                        </ul>
+                        <a href="/services/social-media" class="service-link">
+                            <span>Learn more</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card-inner">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Brand Identity</h3>
+                        <p>Logos, colors, and visuals that communicate your mission with clarity and purpose.</p>
+                        <ul class="service-features">
+                            <li>Logo design & refinement</li>
+                            <li>Color palette selection</li>
+                            <li>Typography guidance</li>
+                            <li>Brand usage guidelines</li>
+                        </ul>
+                        <a href="/services/brand-identity" class="service-link">
+                            <span>Learn more</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card-inner">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Marketing Strategy</h3>
+                        <p>Clarity on your audience, message, and growth path to achieve meaningful business results.</p>
+                        <ul class="service-features">
+                            <li>Audience identification</li>
+                            <li>Competitive analysis</li>
+                            <li>Channel optimization</li>
+                            <li>ROI-focused planning</li>
+                        </ul>
+                        <a href="/services/marketing-strategy" class="service-link">
+                            <span>Learn more</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-card-inner">
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Content Creation</h3>
+                        <p>Photo, video, and copywriting tailored to your brand voice and audience preferences.</p>
+                        <ul class="service-features">
+                            <li>Professional photography</li>
+                            <li>Engaging video content</li>
+                            <li>Conversion-focused copy</li>
+                            <li>Multi-platform optimization</li>
+                        </ul>
+                        <a href="/services/content-creation" class="service-link">
+                            <span>Learn more</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Background patterns -->
+    <div class="bg-pattern pattern-dots services-pattern-1"></div>
+    <div class="bg-pattern pattern-lines services-pattern-2"></div>
+</section>
+
+<!-- Our Process -->
+<section class="process-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">How We Work</span>
+            <h2>Our Process</h2>
+        </div>
+        
+        <div class="process-steps">
+            <div class="process-step" data-aos="fade-up" data-aos-delay="0">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Discover</h3>
+                    <p>We start by understanding your business, values, and goals through a detailed consultation.</p>
+                </div>
+            </div>
+            
+            <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Create</h3>
+                    <p>We develop a customized strategy and begin building the assets that will bring your vision to life.</p>
+                </div>
+            </div>
+            
+            <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Implement</h3>
+                    <p>We execute with excellence, ensuring every detail aligns with your brand and resonates with your audience.</p>
+                </div>
+            </div>
+            
+            <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Grow</h3>
+                    <p>We measure results, refine approaches, and help your business thrive in the digital landscape.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Options -->
+<section class="pricing-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Investment</span>
+            <h2>Flexible Solutions</h2>
+        </div>
+        
+        <div class="pricing-options">
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="pricing-header">
+                    <h3>Project-Based</h3>
+                    <p>Perfect for specific needs</p>
+                </div>
+                <div class="pricing-content">
+                    <ul class="pricing-features">
+                        <li>Defined scope and timeline</li>
+                        <li>One-time investment</li>
+                        <li>Focused deliverables</li>
+                        <li>Clear milestones</li>
+                    </ul>
+                    <p class="pricing-description">Ideal for brand refreshes, website designs, or content packages with specific goals and timelines.</p>
+                </div>
+                <div class="pricing-footer">
+                    <a href="/contact" class="btn btn-outline">Get a Quote</a>
+                </div>
+            </div>
+            
+            <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+                <div class="pricing-badge">Most Popular</div>
+                <div class="pricing-header">
+                    <h3>Monthly Retainer</h3>
+                    <p>Ongoing marketing support</p>
+                </div>
+                <div class="pricing-content">
+                    <ul class="pricing-features">
+                        <li>Consistent brand presence</li>
+                        <li>Regular content creation</li>
+                        <li>Performance analytics</li>
+                        <li>Strategic adjustments</li>
+                    </ul>
+                    <p class="pricing-description">Perfect for businesses seeking consistent growth through ongoing marketing efforts and regular strategy refinement.</p>
+                </div>
+                <div class="pricing-footer">
+                    <a href="/contact" class="btn btn-primary">Start a Conversation</a>
+                </div>
+            </div>
+            
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="pricing-header">
+                    <h3>Consultation</h3>
+                    <p>Expert guidance</p>
+                </div>
+                <div class="pricing-content">
+                    <ul class="pricing-features">
+                        <li>Strategic direction</li>
+                        <li>Implementation guidance</li>
+                        <li>Action-oriented advice</li>
+                        <li>Knowledge transfer</li>
+                    </ul>
+                    <p class="pricing-description">Ideal for businesses with internal resources who need expert direction and strategic input for their marketing efforts.</p>
+                </div>
+                <div class="pricing-footer">
+                    <a href="/contact" class="btn btn-outline">Book a Session</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service CTA -->
+<section class="service-cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to transform your online presence?</h2>
+            <p>Let's build something meaningful together that brings your vision to life.</p>
+            <a href="/contact" class="btn btn-white btn-glow">
+                <i class="far fa-envelope"></i> Get in Touch
+            </a>
+        </div>
+    </div>
+    <div class="cta-shape"></div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Reveal elements on scroll
+        const revealElements = document.querySelectorAll('[data-aos]');
+        const revealOnScroll = function() {
+            revealElements.forEach(function(el) {
+                if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
+                    el.classList.add('revealed');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+    });
+</script>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/images/footer-logo.svg" alt="Boulder Marketing Logo">
+                        <h3>Boulder Marketing</h3>
+                    </div>
+                    <p class="footer-tagline">Marketing Built on the Rock</p>
+                    <div class="footer-verse">
+                        <div class="verse-quote">
+                            "Therefore everyone who hears these words of mine and puts them into practice is like a wise man who built his house on the rock."
+                        </div>
+                        <div class="verse-reference">
+                            Matthew 7:24
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <a href="mailto:chandler@bouldermarketing.net" class="footer-email">
+                        <i class="far fa-envelope"></i> chandler@bouldermarketing.net
+                    </a>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/bouldermarketing" target="_blank" aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/boulder-marketing" target="_blank" aria-label="Follow us on LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://facebook.com/bouldermarketing" target="_blank" aria-label="Follow us on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; Boulder Marketing 2025. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery (Only if needed for testimonial slider) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

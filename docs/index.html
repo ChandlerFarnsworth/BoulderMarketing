@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Boulder Marketing - Student-led, Christ-first marketing agency helping small businesses grow online with affordable, strategy-driven marketing.">
+    <title></title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="">
+    <header class="site-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/logo.svg" alt="Boulder Marketing Logo">
+                        <span>Boulder Marketing</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                        <i class="fas fa-bars mobile-icon-open"></i>
+                        <i class="fas fa-times mobile-icon-close"></i>
+                    </button>
+                    
+                    <ul class="nav-list">
+                        <li><a href="/" class="">Home</a></li>
+                        <li><a href="/about" class="">About</a></li>
+                        <li><a href="/services" class="">Services</a></li>
+                        <li><a href="/portfolio" class="">Portfolio</a></li>
+                        <li><a href="/contact" class="contact-link ">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header scroll effect
+            const header = document.querySelector('.site-header');
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navList = document.querySelector('.nav-list');
+            
+            // Scroll effect
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Initialize header state on page load
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            }
+            
+            // Mobile menu toggle
+            mobileMenuToggle.addEventListener('click', function() {
+                navList.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+                mobileMenuToggle.classList.toggle('open');
+            });
+        });
+    </script>    
+    <main>
+        
+<main class="home-page">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-title-container">
+          <h1 class="reveal-text">Marketing Built <br>on the <span class="accent">Rock</span></h1>
+        </div>
+        <p class="hero-tagline reveal-text">We help small businesses share their values through purpose-driven digital marketing.</p>
+        <div class="hero-cta reveal-text">
+          <a href="/contact" class="btn btn-primary btn-glow">Let's Talk</a>
+          <a href="#services" class="btn btn-outline btn-arrow">
+            <span>Our Services</span>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-shape-1"></div>
+        <div class="hero-shape-2"></div>
+        <div class="hero-shape-3"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripture Banner -->
+  <section id="scripture" class="scripture-banner">
+    <div class="container">
+      <div class="verse-container">
+        <div class="verse-icon">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <div class="verse">
+          <p>"Therefore everyone who hears these words of mine and puts them into practice is like a wise man who built his house on the rock." <cite>Matthew 7:24</cite></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Services Section -->
+<section id="services" class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Services</span>
+      <h2>What We Do</h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-card-inner">
+          <div class="service-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="service-content">
+            <h3>Website Design</h3>
+            <p>Clean, modern websites that reflect your values and connect with your audience.</p>
+            <a href="/services/website-design" class="service-link">
+              <span>Learn more</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card-inner">
+          <div class="service-icon">
+            <i class="fas fa-hashtag"></i>
+          </div>
+          <div class="service-content">
+            <h3>Social Media</h3>
+            <p>Authentic content that builds meaningful connections with your community.</p>
+            <a href="/services/social-media" class="service-link">
+              <span>Learn more</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card-inner">
+          <div class="service-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <div class="service-content">
+            <h3>Brand Identity</h3>
+            <p>Logos and visuals that communicate your mission with integrity and purpose.</p>
+            <a href="/services/brand-identity" class="service-link">
+              <span>Learn more</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="services-cta">
+      <a href="/services" class="text-link">
+        <span>View all services</span>
+        <i class="fas fa-long-arrow-alt-right"></i>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Background patterns -->
+  <div class="bg-pattern pattern-dots"></div>
+  <div class="bg-pattern pattern-lines"></div>
+</section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-label">About Us</span>
+          <h2>Who We Are</h2>
+          <div class="section-line"></div>
+          <p>Boulder Marketing brings faith-forward strategy to small businesses. Our student-led team combines fresh perspectives with Christian principles of integrity and service.</p>
+          
+          <div class="values-tags">
+            <span class="tag tag-animated">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Student-Led</span>
+            </span>
+            <span class="tag tag-animated">
+              <i class="fas fa-cross"></i>
+              <span>Christ-First</span>
+            </span>
+            <span class="tag tag-animated">
+              <i class="fas fa-seedling"></i>
+              <span>Purpose-Driven</span>
+            </span>
+          </div>
+        </div>
+        
+        <div class="approach-card">
+          <div class="approach-card-inner">
+            <h3>Our Approach</h3>
+            <ol class="approach-steps">
+              <li>
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <strong>Discover</strong>
+                  <p>your values and goals</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <strong>Create</strong>
+                  <p>a tailored strategy</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <strong>Implement</strong>
+                  <p>with excellence</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <strong>Grow</strong>
+                  <p>your business with purpose</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="approach-card-shape"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to grow your business with purpose?</h2>
+        <p class="cta-subtitle">Let's build something meaningful together</p>
+        <a href="/contact" class="btn btn-white btn-glow">Contact Us</a>
+      </div>
+    </div>
+    <div class="cta-shape"></div>
+  </section>
+</main>
+
+<!-- Scroll to top button -->
+<a href="#" class="scroll-top" aria-label="Scroll to top">
+  <i class="fas fa-chevron-up"></i>
+</a>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Reveal text animation on page load
+    setTimeout(function() {
+      document.querySelectorAll('.reveal-text').forEach(function(el, index) {
+        setTimeout(function() {
+          el.classList.add('revealed');
+        }, index * 200);
+      });
+    }, 500);
+
+    // Scroll reveal for elements
+    const revealElements = document.querySelectorAll('[data-aos]');
+    const revealOnScroll = function() {
+      revealElements.forEach(function(el) {
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
+          el.classList.add('revealed');
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Initial check
+
+    // Scroll to top button
+    const scrollTopButton = document.querySelector('.scroll-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        scrollTopButton.classList.add('show');
+      } else {
+        scrollTopButton.classList.remove('show');
+      }
+    });
+
+    scrollTopButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Testimonial slider functionality
+    const testimonials = document.querySelectorAll('.testimonial');
+    const dots = document.querySelectorAll('.dot');
+    const prevButton = document.querySelector('.slider-arrow.prev');
+    const nextButton = document.querySelector('.slider-arrow.next');
+    let currentIndex = 0;
+
+    function showTestimonial(index) {
+      testimonials.forEach(testimonial => {
+        testimonial.classList.remove('active');
+      });
+      dots.forEach(dot => {
+        dot.classList.remove('active');
+      });
+      
+      testimonials[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentIndex = index;
+    }
+
+    // Click events for dots
+    dots.forEach(dot => {
+      dot.addEventListener('click', function() {
+        const slideIndex = parseInt(this.getAttribute('data-slide'));
+        showTestimonial(slideIndex);
+      });
+    });
+
+    // Previous testimonial
+    prevButton.addEventListener('click', function() {
+      let newIndex = currentIndex - 1;
+      if (newIndex < 0) {
+        newIndex = testimonials.length - 1;
+      }
+      showTestimonial(newIndex);
+    });
+
+    // Next testimonial
+    nextButton.addEventListener('click', function() {
+      let newIndex = currentIndex + 1;
+      if (newIndex >= testimonials.length) {
+        newIndex = 0;
+      }
+      showTestimonial(newIndex);
+    });
+
+    // Auto-rotate testimonials
+    setInterval(function() {
+      let newIndex = currentIndex + 1;
+      if (newIndex >= testimonials.length) {
+        newIndex = 0;
+      }
+      showTestimonial(newIndex);
+    }, 6000);
+
+    // Scroll to top button
+    const scrollTopButton = document.querySelector('.scroll-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        scrollTopButton.classList.add('show');
+      } else {
+        scrollTopButton.classList.remove('show');
+      }
+    });
+
+    scrollTopButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/images/footer-logo.svg" alt="Boulder Marketing Logo">
+                        <h3>Boulder Marketing</h3>
+                    </div>
+                    <p class="footer-tagline">Marketing Built on the Rock</p>
+                    <div class="footer-verse">
+                        <div class="verse-quote">
+                            "Therefore everyone who hears these words of mine and puts them into practice is like a wise man who built his house on the rock."
+                        </div>
+                        <div class="verse-reference">
+                            Matthew 7:24
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <a href="mailto:chandler@bouldermarketing.net" class="footer-email">
+                        <i class="far fa-envelope"></i> chandler@bouldermarketing.net
+                    </a>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/bouldermarketing" target="_blank" aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/boulder-marketing" target="_blank" aria-label="Follow us on LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://facebook.com/bouldermarketing" target="_blank" aria-label="Follow us on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; Boulder Marketing 2025. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery (Only if needed for testimonial slider) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/js/main.js"></script>
+</body>
+</html>
