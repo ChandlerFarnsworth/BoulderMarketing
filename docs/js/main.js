@@ -1,5 +1,5 @@
 /**
- * Boulder Marketing - Home Page JavaScript
+ * Boulder Marketing - Main JavaScript
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -16,21 +16,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Toggle visibility of scroll-to-top button
-    if (window.scrollY > 300) {
+    if (scrollTopBtn && window.scrollY > 300) {
       scrollTopBtn.classList.add('show');
-    } else {
+    } else if (scrollTopBtn) {
       scrollTopBtn.classList.remove('show');
     }
   });
   
   // Mobile menu toggle
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navMenu = document.querySelector('.nav-menu');
+  const menuToggle = document.querySelector('.mobile-menu-toggle');
+  const navList = document.querySelector('.nav-list');
   
-  if (menuToggle && navMenu) {
+  if (menuToggle && navList) {
     menuToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('active');
-      menuToggle.classList.toggle('active');
+      navList.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+      menuToggle.classList.toggle('open');
     });
   }
   
@@ -52,9 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
           });
           
           // Close mobile menu if open
-          if (navMenu && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            menuToggle.classList.remove('active');
+          if (navList && navList.classList.contains('active')) {
+            navList.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            menuToggle.classList.remove('open');
           }
         }
       }
@@ -100,8 +102,10 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Set wrapper height based on active slide height
       const wrapper = document.querySelector('.testimonial-wrapper');
-      const activeSlide = testimonials[currentSlide];
-      wrapper.style.height = `${activeSlide.offsetHeight}px`;
+      if (wrapper) {
+        const activeSlide = testimonials[currentSlide];
+        wrapper.style.height = `${activeSlide.offsetHeight}px`;
+      }
     }
     
     // Set initial slide and wrapper height
@@ -153,6 +157,83 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         scrollIndicator.style.opacity = '0.7';
       }
+    });
+  }
+  
+  // Reveal elements on scroll (for AOS-like functionality)
+  const revealElements = document.querySelectorAll('[data-aos]');
+  
+  if (revealElements.length > 0) {
+    const revealOnScroll = function() {
+      revealElements.forEach(function(el) {
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
+          el.classList.add('revealed');
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', revealOnScroll);
+    // Initial check on page load
+    revealOnScroll();
+  }
+  
+  // Portfolio filtering (if on portfolio page)
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+  
+  if (filterBtns.length > 0 && portfolioItems.length > 0) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Get filter value
+        const filterValue = this.getAttribute('data-filter');
+        
+        // Filter portfolio items
+        portfolioItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+  
+  // FAQ accordion (if on services or contact page)
+  const questionToggles = document.querySelectorAll('.question-toggle');
+  
+  if (questionToggles.length > 0) {
+    questionToggles.forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const faqItem = this.closest('.faq-item');
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+          const icon = item.querySelector('.fas');
+          if (icon) {
+            icon.classList.remove('fa-minus');
+            icon.classList.add('fa-plus');
+          }
+        });
+        
+        // If clicked item wasn't active, open it
+        if (!isActive) {
+          faqItem.classList.add('active');
+          const icon = this.querySelector('.fas');
+          if (icon) {
+            icon.classList.remove('fa-plus');
+            icon.classList.add('fa-minus');
+          }
+        }
+      });
     });
   }
 });
