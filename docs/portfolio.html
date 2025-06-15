@@ -19,6 +19,52 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Additional styles for portfolio links */
+        .portfolio-item {
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .portfolio-overlay {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .view-project-btn {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 10px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .view-project-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .external-link-icon {
+            margin-left: 5px;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body class="">
     <header class="site-header">
@@ -115,12 +161,15 @@
     <div class="container">
         <div class="portfolio-grid">
             <!-- Portfolio Item 1 -->
-            <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="0">
+            <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="0" onclick="window.open('https://mapmosaic.com', '_blank')">
                 <div class="portfolio-image">
-                    <img src="images/portfolio-1.jpg" alt="Map Mosaic Wesbtie">
+                    <img src="images/portfolio-1.jpg" alt="Map Mosaic Website">
                     <div class="portfolio-overlay">
                         <div class="overlay-content">
                             <span class="project-category">Website Design</span>
+                            <a href="https://mapmosaic.com" target="_blank" class="view-project-btn" onclick="event.stopPropagation()">
+                                View Live Site<i class="fas fa-external-link-alt external-link-icon"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -134,13 +183,16 @@
             </div>
             
             <!-- Portfolio Item 2 -->
-            <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="100" onclick="window.open('https://aveocapital.com', '_blank')">
                 <div class="portfolio-image">
                     <img src="images/portfolio-2.jpg" alt="Aveo Capital">
                     <div class="portfolio-overlay">
                         <div class="overlay-content">
                             <span class="project-category">Website Design</span>
                             <span class="project-category">Social Media</span>
+                            <a href="https://aveocapital.com" target="_blank" class="view-project-btn" onclick="event.stopPropagation()">
+                                View Live Site<i class="fas fa-external-link-alt external-link-icon"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -154,12 +206,15 @@
             </div>
             
             <!-- Portfolio Item 3 -->
-            <div class="portfolio-item" data-category="brand" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-item" data-category="brand" data-aos="fade-up" data-aos-delay="200" onclick="window.open('https://glacierbroadband.com', '_blank')">
                 <div class="portfolio-image">
                     <img src="images/portfolio-3.jpg" alt="Glacier Broadband">
                     <div class="portfolio-overlay">
                         <div class="overlay-content">
                             <span class="project-category">Social Media</span>
+                            <a href="https://glacierbroadband.com" target="_blank" class="view-project-btn" onclick="event.stopPropagation()">
+                                View Live Site<i class="fas fa-external-link-alt external-link-icon"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -173,12 +228,15 @@
             </div>
             
             <!-- Portfolio Item 4 -->
-            <div class="portfolio-item" data-category="social" data-aos="fade-up" data-aos-delay="300">
+            <div class="portfolio-item" data-category="social" data-aos="fade-up" data-aos-delay="300" onclick="window.open('https://milehighnetworks.com', '_blank')">
                 <div class="portfolio-image">
-                    <img src="images/portfolio-4.jpg" alt="Fitness Studio Social Media">
+                    <img src="images/portfolio-4.jpg" alt="Mile High Networks Social Media">
                     <div class="portfolio-overlay">
                         <div class="overlay-content">
                             <span class="project-category">Social Media</span>
+                            <a href="https://milehighnetworks.com" target="_blank" class="view-project-btn" onclick="event.stopPropagation()">
+                                View Live Site<i class="fas fa-external-link-alt external-link-icon"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -192,40 +250,23 @@
             </div>
             
             <!-- Portfolio Item 5 -->
-            <div class="portfolio-item" data-category="brand" data-aos="fade-up" data-aos-delay="400">
+            <div class="portfolio-item" data-category="social" data-aos="fade-up" data-aos-delay="500" onclick="window.open('https://bbigdesigns.com/', '_blank')">
                 <div class="portfolio-image">
-                    <img src="images/portfolio-5.jpg" alt="Nonprofit Organization Branding">
-                    <div class="portfolio-overlay">
-                        <div class="overlay-content">
-                            <span class="project-category">Branding</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-info">
-                    <h3>Nonprofit Organization</h3>
-                    <p>Brand Identity, Website Design</p>
-                    <div class="results-tag">
-                        <span>+50% Donor Engagement</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Portfolio Item 6 -->
-            <div class="portfolio-item" data-category="social" data-aos="fade-up" data-aos-delay="500">
-                <div class="portfolio-image">
-                    <img src="images/portfolio-6.jpg" alt="Local Restaurant Social Media">
+                    <img src="images/portfolio-6.jpg" alt="BBIG Designs Social Media">
                     <div class="portfolio-overlay">
                         <div class="overlay-content">
                             <span class="project-category">Social Media</span>
-                            <!-- <a href="portfolio/restaurant.html" class="view-project">View Project</a> -->
+                            <a href="https://bbigdesigns.com/" target="_blank" class="view-project-btn" onclick="event.stopPropagation()">
+                                View Live Site<i class="fas fa-external-link-alt external-link-icon"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-info">
-                    <h3>Local Restaurant</h3>
-                    <p>Social Media, Content Strategy</p>
+                    <h3>BBIG Designs</h3>
+                    <p>Social Media Management for Custom Belt Buckle Business</p>
                     <div class="results-tag">
-                        <span>+35% Reservations</span>
+                        <span>+150% Social Engagement</span>
                     </div>
                 </div>
             </div>
@@ -261,7 +302,6 @@
                         </div>
                     </div>
                     <div class="process-step">
-                        <div class="step-number">3</div>
                         <div class="step-text">
                             <h3>Creation</h3>
                             <p>Building assets that bring your vision to life</p>
