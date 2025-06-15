@@ -35,12 +35,6 @@
   margin-bottom: 0.5rem;
 }
 
-.section-line {
-  width: 60px;
-  height: 3px;
-  background: var(--primary-color);
-  margin: 1rem auto 2.5rem;
-}
 
 .container {
   padding: 0 5%;
@@ -267,12 +261,6 @@
   color: var(--text-dark);
 }
 
-.section-line {
-  width: 60px;
-  height: 3px;
-  background: var(--primary-color);
-  margin: 1rem auto 0;
-}
 
 .services-grid {
   display: grid;
@@ -509,9 +497,6 @@
   max-width: 600px;
 }
 
-.about-content .section-line {
-  margin: 1rem 0 2rem;
-}
 
 .about-content h2 {
   font-size: 2.5rem;
@@ -925,9 +910,6 @@
     order: 1;
   }
   
-  .section-line {
-    margin: 1rem auto 2.5rem;
-  }
 }
 
 @media (max-width: 992px) {
@@ -945,9 +927,6 @@
     max-width: 100%;
   }
   
-  .about-content .section-line {
-    margin: 1rem auto 2rem;
-  }
   
   .about-content {
     text-align: center;
